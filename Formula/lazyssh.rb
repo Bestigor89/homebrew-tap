@@ -4,31 +4,31 @@
 class Lazyssh < Formula
   desc "Keyboard-driven SSH manager and dual-pane SFTP file browser for the terminal"
   homepage "https://github.com/Bestigor89/lazyssh"
-  version "1.1.2"
+  version "1.1.3"
   license "PolyForm-Noncommercial-1.0.0"
 
   # Prebuilt bottles — brew pours these and skips the Xcode check entirely.
   bottle do
-    root_url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fa7b3d4f9267c005ace82a32019d4aeadd820f818b83d636e6666297926cac9f"
-    sha256 cellar: :any_skip_relocation, sequoia:       "5d3569947b297c714843354d20d3421ad5ceef54df28d7a9e5c17a588dc4d42d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3551d4e37308830018e6f5785e9a384470c265a2dacf3eaf59b601b1a4718db8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "55cdd4f1e841bbc9b109ada79178266a395a59db3b2f16ed7d08e28c58535e09"
+    root_url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e694a62b6ee53dc77a492176cec09eabd4240aac6f6ae0636858d17ae73ac707"
+    sha256 cellar: :any_skip_relocation, sequoia:       "ab5b45816f67f17308d66020597c9372f05b17096c1dd6535fe52f0e783c431b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b6740671e6c876848c19b5518e0b1515b0ee86be55351c0e45187ca99a7de44"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "250ab15da20969fb8d12b1e9da31b9565cb72714b64e36ad832490e26f452779"
   end
 
   # Source archives — used only when building from source (--build-from-source).
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.2/lazyssh_1.1.2_darwin_arm64.tar.gz"
-    sha256 "4ab41ca0924598e25d2ec4e7c2fce736267ee5f748165d15e0a501d5aa2eda55"
+    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.3/lazyssh_1.1.3_darwin_arm64.tar.gz"
+    sha256 "594998f17d07d86f1d7fa255a4ef17c89fd18e54a7df1d2a094afa2d2d6d1e3b"
   elsif OS.mac?
-    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.2/lazyssh_1.1.2_darwin_amd64.tar.gz"
-    sha256 "30a33e0fe3b26018f092043a614e8d63d6635871a1a65129e6e085ab0bf5d4f1"
+    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.3/lazyssh_1.1.3_darwin_amd64.tar.gz"
+    sha256 "1e4f2796ce8ecd901a96f493bd0ba6e287150b576b0b035b87fccfaadb992c14"
   elsif Hardware::CPU.arm?
-    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.2/lazyssh_1.1.2_linux_arm64.tar.gz"
-    sha256 "4688fea8617527b46d9a2085223cb4832109618bb16933e7a6afb2416320b4a2"
+    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.3/lazyssh_1.1.3_linux_arm64.tar.gz"
+    sha256 "fa0f74fc61a43fe2a82ad3ba7f7420b16f1b24c1e37baed2fee26f0e61971ef2"
   else
-    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.2/lazyssh_1.1.2_linux_amd64.tar.gz"
-    sha256 "5247e51346c2616f60a7c7443cea9a7179bb58a3c8097b061d2233bf44257a81"
+    url "https://github.com/Bestigor89/lazyssh/releases/download/v1.1.3/lazyssh_1.1.3_linux_amd64.tar.gz"
+    sha256 "e383ff2a57dfe3cb4ce0d9f070b8fe68b574e4eb7e9d9ad0a4e5523dc309f12f"
   end
 
   def install
