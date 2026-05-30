@@ -7,8 +7,6 @@ class Lazyssh < Formula
   version "1.0.2"
   license "PolyForm-Noncommercial-1.0.0"
 
-  bottle :unneeded
-
   on_macos do
     on_arm do
       url "https://github.com/Bestigor89/lazyssh/releases/download/v1.0.2/lazyssh_1.0.2_darwin_arm64.tar.gz"
